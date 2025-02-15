@@ -4,83 +4,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Cliente Fictício</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Landing Page de TI</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- FontAwesome (Para ícones) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container hero-content">
-      <h1>Transforme Seu Negócio com Tecnologia de Ponta</h1>
-      <p>Somos especializados em soluções digitais inovadoras que ajudam sua empresa a crescer online.</p>
-      <a href="#contato" class="btn">Entre em Contato</a>
-    </div>
-  </section>
-
-  <!-- Sobre -->
-  <section id="sobre" class="sobre">
+  <section id="home" class="hero d-flex align-items-center text-center text-white" data-aos="fade-up">
     <div class="container">
-      <h2>Sobre Nós</h2>
-      <p>Somos uma equipe apaixonada por tecnologia e inovação. Trabalhamos para fornecer soluções de qualidade que atendem
-        às necessidades dos nossos clientes.</p>
+      <h1 class="display-4 mb-4">Transforme Sua Empresa com Tecnologia de Ponta</h1>
+      <p class="lead mb-5">Soluções de TI inovadoras para o seu negócio crescer online de forma eficiente.</p>
+      <a href="#contato" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Entre em Contato</a>
     </div>
   </section>
 
   <!-- Serviços -->
-  <section id="servicos" class="servicos">
+  <section id="servicos" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
-      <h2>Nossos Serviços</h2>
-      <div class="servico">
-        <h3>Desenvolvimento Web</h3>
-        <p>Criamos sites rápidos e responsivos que destacam seu negócio na web.</p>
-      </div>
-      <div class="servico">
-        <h3>Marketing Digital</h3>
-        <p>Estratégias personalizadas para aumentar a visibilidade online e atrair mais clientes.</p>
-      </div>
-      <div class="servico">
-        <h3>Consultoria em TI</h3>
-        <p>Ajudamos sua empresa a integrar as melhores tecnologias para otimizar processos.</p>
+      <h2 class="text-center mb-5">Nossos Serviços</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="service-box">
+            <i class="fas fa-laptop-code fa-4x mb-4"></i>
+            <h4>Desenvolvimento Web</h4>
+            <p>Criamos websites rápidos e modernos, totalmente responsivos e prontos para o seu negócio.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-box">
+            <i class="fas fa-cloud fa-4x mb-4"></i>
+            <h4>Consultoria em Nuvem</h4>
+            <p>Ajudamos sua empresa a migrar e otimizar soluções na nuvem com segurança e escalabilidade.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-box">
+            <i class="fas fa-shield-alt fa-4x mb-4"></i>
+            <h4>Segurança Digital</h4>
+            <p>Proteja seu negócio contra ameaças com as melhores práticas e ferramentas de segurança cibernética.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contato" class="contato">
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-5 bg-dark text-white" data-aos="fade-up">
     <div class="container">
-      <h2>Contato</h2>
-      <form action="#" method="POST" id="form-contato">
-        <input type="text" name="nome" placeholder="Seu Nome" required>
-        <input type="email" name="email" placeholder="Seu Email" required>
-        <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-        <button type="submit" class="btn">Enviar Mensagem</button>
-      </form>
+      <h2 class="text-center mb-5">O que Nossos Clientes Dizem</h2>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p>"A equipe de TI fez um trabalho incrível, nossa empresa está mais segura e nossa infraestrutura está mais eficiente!"</p>
+            <footer>- João Silva, CEO da TechCompany</footer>
+          </div>
+          <div class="carousel-item">
+            <p>"Ótima consultoria! Eles conseguiram entender nossas necessidades e fornecer soluções práticas e rápidas."</p>
+            <footer>- Maria Souza, Diretora de TI da Innovatech</footer>
+          </div>
+          <div class="carousel-item">
+            <p>"A parceria com essa equipe nos ajudou a melhorar a performance e segurança do nosso sistema online."</p>
+            <footer>- Pedro Oliveira, CTO da DigitalPrime</footer>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Cliente Fictício. Todos os direitos reservados.</p>
+  <!-- Contato Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Entre em Contato</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Seu Email" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="message" rows="3" placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; One Click Solutions - Todos os direitos reservados. | <a href="https://www.linkedin.com/in/george-silv4/" class="text-white">LinkedIn</a></p>
   </footer>
 
+  <!-- Bootstrap JS, Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- AOS.js -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Custom JS -->
   <script src="app.js"></script>
+
+  <script>
+    AOS.init(); // Inicializando as animações AOS
+  </script>
+
 </body>
 
 </html>

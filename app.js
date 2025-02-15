@@ -1,11 +1,20 @@
-// Scroll suave para as âncoras
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+// Validando o formulário de contato
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
   
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
+    // Coleta dos valores do formulário
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+  
+    // Validação simples
+    if (name && email && message) {
+      alert('Mensagem enviada com sucesso!');
+      // Aqui seria o ponto de integração com o backend
+      document.getElementById('contactForm').reset();
+      $('#contactModal').modal('hide');
+    } else {
+      alert('Por favor, preencha todos os campos!');
+    }
   });
   
