@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Landing Page - Cliente Fictício</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Bem-vindo à Nossa Landing Page!</h1>
-    <p>Descubra nossos serviços incríveis.</p>
-    <a href="#contato" class="btn">Entre em Contato</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Transforme Seu Negócio com Tecnologia de Ponta</h1>
+      <p>Somos especializados em soluções digitais inovadoras que ajudam sua empresa a crescer online.</p>
+      <a href="#contato" class="btn">Entre em Contato</a>
+    </div>
   </section>
 
-  <section id="contato" class="contato">
-    <h2>Contato</h2>
-    <p>Envie-nos uma mensagem.</p>
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>Somos uma equipe apaixonada por tecnologia e inovação. Trabalhamos para fornecer soluções de qualidade que atendem
+        às necessidades dos nossos clientes.</p>
+    </div>
   </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="servico">
+        <h3>Desenvolvimento Web</h3>
+        <p>Criamos sites rápidos e responsivos que destacam seu negócio na web.</p>
+      </div>
+      <div class="servico">
+        <h3>Marketing Digital</h3>
+        <p>Estratégias personalizadas para aumentar a visibilidade online e atrair mais clientes.</p>
+      </div>
+      <div class="servico">
+        <h3>Consultoria em TI</h3>
+        <p>Ajudamos sua empresa a integrar as melhores tecnologias para otimizar processos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <form action="#" method="POST" id="form-contato">
+        <input type="text" name="nome" placeholder="Seu Nome" required>
+        <input type="email" name="email" placeholder="Seu Email" required>
+        <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Cliente Fictício. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
+
 </html>

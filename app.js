@@ -1,6 +1,11 @@
-// Exemplo de uma animação simples de scroll suave
-document.querySelector('.btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#contato').scrollIntoView({ behavior: 'smooth' });
+// Scroll suave para as âncoras
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
   });
   
